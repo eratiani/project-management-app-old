@@ -1,0 +1,25 @@
+.task-card {
+    border: 3px solid black;
+}
+.task-card div {
+    background-color: rgba(0, 0, 0, 0.433);
+    color: rgba(255, 255, 255, 0.781);
+    border-radius: 4px;
+    padding: 25px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.task-card div:hover {
+    background-color: rgba(0, 0, 0, 0.767);
+    backdrop-filter: blur(2px);
+}
+.task-card-title {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;    
+}
+
+.task-card-content {
+    margin-top: 7px;
+    text-decoration: none;
+}

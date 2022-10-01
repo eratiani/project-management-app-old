@@ -1,0 +1,33 @@
+<h1 class="text-center">{{"Welcome" | translate}} {{ currUserNick }}</h1>
+<div class="container d-flex justify-content-between">
+    <app-header> </app-header>
+    <div class="user">
+        <a class="btn btn-primary m-2" href="/Home/id">{{"Edit" | translate}}</a>
+        <a class="btn btn-primary" href="/Home">{{"log Out" | translate}}</a>
+    </div>
+    </div>
+<div class="todo-wrapper">
+
+    <div class="container">
+
+        <div class="task-list">
+
+            <a [routerLink]="[task.id]" *ngFor="let task of tasks">
+            <app-task-card [task]="task"></app-task-card>
+            </a>
+            
+        </div>
+
+        <div class="container">
+            <div class="col-3 m-auto">
+                <a routerLink="/todo/add" class="btn btn-danger">
+                    {{"Add" | translate}}
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
+<app-body></app-body>
+<app-footer></app-footer>

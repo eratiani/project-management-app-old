@@ -1,0 +1,17 @@
+<div class="edit-note">
+    <h2 class="text-center me-5 mb-3">Edit Task</h2>
+    <p *ngIf="!task" class="text-center ">Task not found</p>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" class="bg-info " >
+        <div class="p-3 m-auto col-3">
+            <input class="textbox" [ngModel]="task.title" #titleField="ngModel" name="title" type="text" placeholder="Enter task title..." required minlength="3">
+        </div>
+        <div class="p-3 m-auto col-3">
+            <textarea class="textarea" [ngModel]="task.content" name="content" placeholder="Enter task content..."></textarea>
+        </div>
+        <div class="p-3 m-auto col-3">
+            <a routerLink="/todo" class="btn btn-danger me-2">Cancel</a>
+            <button type="button" class="btn btn-dark me-2" (click)="deleteNote()">Delete</button>
+            <button class=" btn btn-danger">Save</button>
+        </div>
+    </form>
+</div>

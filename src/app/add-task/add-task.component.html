@@ -1,0 +1,15 @@
+<div class="add-note-wrapper container has-blurred-white-bg">
+    <h2 class="text-center me-5 mb-3">Create New Task</h2>
+    <form #form="ngForm" (ngSubmit)="onFormSubmit(form)" class="bg-info " >
+        <div class="p-3 m-auto col-3">
+            <input class="textbox" ngModel #titleField="ngModel" name="title" type="text" placeholder="Enter task title..." required minlength="3">
+        </div>
+        <div class="p-3 m-auto col-3">
+            <textarea class="textarea" ngModel name="content" placeholder="Enter task content..."></textarea>
+        </div>
+        <div class="p-3 m-auto col-3">
+            <a routerLink="/todo" class="btn btn-danger me-4">Cancel</a>
+            <button class=" btn btn-danger">Create Note</button>
+        </div>
+    </form>
+</div>
